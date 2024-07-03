@@ -27,9 +27,15 @@
     <ClInclude Include="src\DDE\entryPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\DDE\log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\DDE\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DDE\log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
