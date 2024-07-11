@@ -6,7 +6,7 @@ int main(int argc, char** argv)
 {
 	DDE::log::Init();
 	DDE_CORE_WARN("DDE Initalized");
-	DDE_INFO("Crafting digital devils today?");
+	DDE_INFO("Digital Devil Engine Online");
 	//Allocated on the heap, explicit to memory
 	//Basic entry point
 	auto app = DDE::CreateApplication();
