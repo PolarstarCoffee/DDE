@@ -76,7 +76,7 @@ project "Sandbox"
 
 	includedirs
 	{
-		"%{prj.name}/vendor/spdlog/include",
+		"DDE/vendor/spdlog/include",
 		"DDE/src"
 	}
 	links
@@ -92,8 +92,7 @@ project "Sandbox"
 
 		defines
 		{
-			"DDE_PLATFORM_WINDOWS",
-			"DDE_BUILD_DLL",
+			"DDE_PLATFORM_WINDOWS"
 		}
 	filter "configurations:Debug"
 		defines "DDE_DEBUG"
