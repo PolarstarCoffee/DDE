@@ -25,7 +25,7 @@ project "DDE"
 		"%{prj.name}/src/**.cpp"
 	}
 
-	include
+	includedirs
 	{
 		"%{prj.name}/vendor/spdlog/include"
 	}
@@ -59,4 +59,48 @@ project "DDE"
 		symbols "On"
 	
 	
-	
+
+
+project "Sandbox"
+	location "Sandbox"
+	kind "ConsoleApp"
+	language"C++"
+
+	targetdir ("bin/"..outputdir.."/%{prj.name}")
+	objdir ("bin-int/"..outputdir.."/%{prj.name}")
+	files
+	{
+		"%{prj.name}/src/**.h",
+		"%{prj.name}/src/**.cpp"
+	}
+
+	includedirs
+	{
+		"%{prj.name}/vendor/spdlog/include",
+		"DDE/src"
+	}
+	links
+	{
+		"DDE"
+	}
+
+	filter "system:windows"
+		cppdialect "C++17"
+		staticruntime "On"
+		systemversion "latest"
+
+
+		defines
+		{
+			"DDE_PLATFORM_WINDOWS",
+			"DDE_BUILD_DLL",
+		}
+	filter "configurations:Debug"
+		defines "DDE_DEBUG"
+		symbols "On"
+	filter "configurations:Release"
+		defines "DDE_RELEASE"
+		optimize "On"
+	filter "configurations:Dist"
+		defines "DDE_DIST"
+		symbols "On"
