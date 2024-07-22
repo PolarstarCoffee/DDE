@@ -17,12 +17,6 @@ namespace DDE {
 	private:
 		static std::shared_ptr<spdlog::logger> s_CoreLogger;
 		static std::shared_ptr<spdlog::logger> s_ClientLogger;
-
-
-
-
-
-
 	};
 
 
@@ -40,3 +34,6 @@ namespace DDE {
 #define DDE_WARN(...) ::DDE::log::getClientLogger()->warn(__VA_ARGS__)
 #define DDE_TRACE(...) ::DDE::log::getClientLogger()->trace(__VA_ARGS__)
 #define DDE_FATAL(...) ::DDE::log::getClientLogger()->fatal(__VA_ARGS__)
+
+
+//study macro def with third party packages

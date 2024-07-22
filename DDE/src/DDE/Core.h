@@ -10,4 +10,4 @@
 #error Digital Devil Engine only supports Windows for now!
 #endif
 
-//Macros 
+//Macros yet only works on windows
