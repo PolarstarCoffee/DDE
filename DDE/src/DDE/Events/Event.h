@@ -1,5 +1,3 @@
 #pragma once
 
-
-#include "DDE/Core.h"
-
+#include "C:\dev\DDE\DDE\src\DDE\Core.h"
